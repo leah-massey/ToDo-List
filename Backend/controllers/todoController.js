@@ -17,3 +17,13 @@ module.exports.addToDo = async (req, res) => {
     res.send(data);
   });
 };
+
+module.exports.updateToDo = async (req, res) => {
+  const { _id, text } = req.body;
+
+  ToDoModel.findByIdAndUpdate(_id, { text })
+    .then(() => res.set(201).send("Updated Successfully"))
+    .catch((err) => {
+      console.log(err);
+    });
+};
