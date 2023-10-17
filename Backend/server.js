@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+const routes = require("./routes/todoRoute");
+
 require("dotenv").config();
 
 const app = express();
@@ -14,5 +16,7 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+app.use(routes);
 
 app.listen(PORT, () => console.log(`Listening on : ${PORT}`));

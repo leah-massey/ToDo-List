@@ -7,4 +7,4 @@ router.get("/", (req, res) => {
   res.json({ message: "hi there" });
 });
 
-module.exports("router");
+module.exports = router;
