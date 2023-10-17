@@ -27,3 +27,15 @@ module.exports.updateToDo = async (req, res) => {
       console.log(err);
     });
 };
+
+module.exports.deleteToDo = async (req, res) => {
+  const { _id } = req.body;
+
+  ToDoModel.findByIdAndDelete(_id)
+    .then(() => {
+      res.set(201).send("deleted!");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
