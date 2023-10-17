@@ -1,8 +1,9 @@
-const { Router } = require("express");
-const { getToDo } = require("../controllers/todoController");
+const { Router } = require("express"); // import Router class from the express framework.
+const { getToDo, addToDo } = require("../controllers/todoController");
 
-const routes = Router();
+const router = Router();
 
-routes.get("/", getToDo);
+router.get("/", getToDo);
+router.post("/add", addToDo);
 
-module.exports = routes;
+module.exports = router;

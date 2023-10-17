@@ -9,4 +9,4 @@ const todoSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("ToDo", todoSchema);
+module.exports = mongoose.model("ToDo", todoSchema); //"ToDo" should match the name in collection in mongoDB database but singular, todoSchema is name of schema.
