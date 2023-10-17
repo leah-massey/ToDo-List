@@ -1,9 +1,8 @@
 const { Router } = require("express");
+const { getToDo } = require("../controllers/todoController");
 
 const routes = Router();
 
-routes.get("/", (req, res) => {
-  res.json({ message: "hello this is working" });
-});
+routes.get("/", getToDo);
 
 module.exports = routes;
