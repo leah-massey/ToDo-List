@@ -1,10 +1,9 @@
-const { Router } = require("express"); // take router from express package
+const { Router } = require("express");
 
-const router = Router();
+const routes = Router();
 
-//create a route handler
-router.get("/", (req, res) => {
-  res.json({ message: "hi there" });
+routes.get("/", (req, res) => {
+  res.json({ message: "hello this is working" });
 });
 
-module.exports = router;
+module.exports = routes;
