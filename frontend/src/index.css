@@ -60,3 +60,10 @@ input {
   cursor: pointer;
   font-size: 20px;
 }
+
+.add {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+}

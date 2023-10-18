@@ -21,4 +21,13 @@ const getAllToDo = (setToDo) => {
       console.error("Error:", error);
     });
 };
-export { getAllToDo };
+
+const addToDo = (text, setText, setToDo) => {
+  axios.post(`${baseURL}/create`, { text }).then((data) => {
+    console.log(data);
+    setText("");
+    getAllToDo(setToDo);
+  });
+};
+
+export { getAllToDo, addToDo };
