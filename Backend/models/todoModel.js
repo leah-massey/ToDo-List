@@ -1,5 +1,3 @@
-// create schema for todo list
-
 const mongoose = require("mongoose");
 
 const todoSchema = new mongoose.Schema({
@@ -9,4 +7,4 @@ const todoSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("ToDo", todoSchema); //"ToDo" should match the name in collection in mongoDB database but singular, todoSchema is name of schema.
+module.exports = mongoose.model("ToDo", todoSchema); // "ToDo" should match the name you want to use in the database(but singular) and todoSchema is the name of your schema

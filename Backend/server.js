@@ -14,13 +14,13 @@ app.use(cors());
 
 mongoose
   .connect(process.env.MONGODB_URL)
-  .then(() => {
-    console.log("connected to MongoDB");
-  })
+  .then(console.log("connected to mongodb"))
   .catch((err) => {
     console.log(err);
   });
 
 app.use(router);
 
-app.listen(PORT, () => console.log(`Listening on : ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`);
+});

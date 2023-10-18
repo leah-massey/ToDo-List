@@ -1,18 +1,15 @@
-// define how the todo list (data) is saved in the database
 const ToDoModel = require("../models/todoModel");
 
-// retrieve todos
 module.exports.getToDo = async (req, res) => {
   const toDo = await ToDoModel.find();
   res.send(toDo);
 };
 
-// add todo
-module.exports.addToDo = async (req, res) => {
+module.exports.createToDo = async (req, res) => {
   const { text } = req.body;
 
   ToDoModel.create({ text }).then((data) => {
-    console.log("added successfully");
+    console.log("todo created!");
     console.log(data);
     res.send(data);
   });
@@ -22,7 +19,9 @@ module.exports.updateToDo = async (req, res) => {
   const { _id, text } = req.body;
 
   ToDoModel.findByIdAndUpdate(_id, { text })
-    .then(() => res.set(201).send("Updated Successfully"))
+    .then(() => {
+      res.send("updated Successfully");
+    })
     .catch((err) => {
       console.log(err);
     });
@@ -33,7 +32,7 @@ module.exports.deleteToDo = async (req, res) => {
 
   ToDoModel.findByIdAndDelete(_id)
     .then(() => {
-      res.set(201).send("deleted!");
+      res.send("successfully deleted todo");
     })
     .catch((err) => {
       console.log(err);
