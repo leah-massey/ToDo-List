@@ -24,7 +24,7 @@ const ToDoBox = () => {
   };
 
   return (
-    <div className="content bg-white px-8 pt-4 mt-10 w-3/4 md:max-w-2xl h-[75vh] rounded-md font-mono">
+    <div className="content bg-white px-8 pt-4 mt-10 w-3/4 md:max-w-2xl h-[80vh] rounded-md font-mono ">
       <h1 className="mt-5 flex justify-center text-center text-3xl  tracking-widest">
         ToDo List
       </h1>
@@ -52,7 +52,7 @@ const ToDoBox = () => {
         </div>
         <div className="h-8"> </div>
 
-        <div className=" overflow-y-auto h-[52vh] py-2 ">
+        <div className=" overflow-y-auto h-[58vh] py-2 ">
           {toDo.map((item) => {
             return (
               <ToDo
