@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="h-screen bg-gradient-to-r from-cyan-100 to-blue-100 flex justify-center items-center">
-      <div className=" bg-white px-8 pt-4 mt-10 w-3/4 md:max-w-2xl rounded-md font-mono">
+      <div className="content bg-white px-8 pt-4 mt-10 w-3/4 md:max-w-2xl h-[75vh] rounded-md font-mono">
         <h1 className="mt-5 flex justify-center text-center text-3xl  tracking-widest">
           ToDo List
         </h1>
@@ -46,8 +46,9 @@ function App() {
               {isUpdating ? "update" : "Add"}
             </button>
           </div>
+          <div className="h-8"> </div>
 
-          <div className="py-5">
+          <div className=" overflow-y-auto h-[52vh] py-2 ">
             {toDo.map((item) => {
               return (
                 <ToDo
