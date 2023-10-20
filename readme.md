@@ -6,7 +6,7 @@ A user can list, update and delete items from their todo list. Each upate appear
 <img src="./public/images/screenshot1.png" alt="Screenshot of project" title="ToDoList">
 </p>
 
-Clicking on the update icon on a todo allows a user to update the content.
+Clicking on the update icon on a todo allows a user to update the content:
 
 <p align="center">
 <img src="./public/images/screenshot2.png" alt="Screenshot of project" title="ToDoList">
