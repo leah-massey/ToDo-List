@@ -4,7 +4,7 @@ import { BiEdit } from "react-icons/bi";
 
 const ToDo = ({ text, updateMode, deleteToDo }) => {
   return (
-    <div className="todo bg-orange-200  ">
+    <div className="todo bg-rose-50  ">
       <div className="text ">{text}</div>
       <div className="icons">
         <BiEdit className="icon " onClick={updateMode} />
