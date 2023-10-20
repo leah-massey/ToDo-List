@@ -39,7 +39,7 @@ const ToDoBox = () => {
             onChange={(e) => setText(e.target.value)}
           />
           <button
-            className=" cursor-pointer bg-red-200 mx-5 md:mx-6 px-6 py-3 rounded-md"
+            className=" cursor-pointer bg-rose-200 mx-5 md:mx-6 px-6 py-3 rounded-md"
             onClick={
               isUpdating
                 ? () =>
