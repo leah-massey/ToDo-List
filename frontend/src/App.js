@@ -19,18 +19,20 @@ function App() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-amber-100 to-red-200 flex justify-center items-center">
-      <div className="App container bg-white px-3 pt-4 mt-10 w-3/4 md:max-w-2xl rounded-md ">
-        <h1 className="flex justify-center text-center text-3xl">ToDo App</h1>
-        <div className="top">
+    <div className="h-screen bg-gradient-to-r from-amber-100 to-red-200 flex justify-center items-center">
+      <div className=" bg-white px-8 pt-4 mt-10 w-3/4 md:max-w-2xl rounded-md font-mono">
+        <h1 className="mt-5 flex justify-center text-center text-3xl  tracking-widest">
+          ToDo App
+        </h1>
+        <div className="px-5 pt-8 ">
           <input
             type="text"
             placeholder="add todo"
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
-          <div
-            className="add cursor-pointer"
+          <button
+            className=" cursor-pointer bg-red-200 mx-6 px-6 py-3 rounded-md"
             onClick={
               isUpdating
                 ? () =>
@@ -39,9 +41,9 @@ function App() {
             }
           >
             {isUpdating ? "update" : "Add"}
-          </div>
+          </button>
         </div>
-        <div className="list">
+        <div className="py-5">
           {toDo.map((item) => {
             return (
               <ToDo
