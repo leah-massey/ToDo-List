@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ToDo from "./compnents/ToDo";
-import { addToDo, getAllToDo, updateToDo } from "./utils/HandleApi";
+import { addToDo, getAllToDo, updateToDo, deleteToDo } from "./utils/HandleApi";
 
 function App() {
   const [toDo, setToDo] = useState([]);
@@ -19,9 +19,9 @@ function App() {
   };
 
   return (
-    <>
-      <div className="App container">
-        <h1>ToDo App</h1>
+    <div className="bg-gradient-to-r from-amber-100 to-red-200 flex justify-center items-center">
+      <div className="App container bg-white px-3 pt-4 mt-10 w-3/4 md:max-w-2xl rounded-md ">
+        <h1 className="flex justify-center text-center text-3xl">ToDo App</h1>
         <div className="top">
           <input
             type="text"
@@ -30,7 +30,7 @@ function App() {
             onChange={(e) => setText(e.target.value)}
           />
           <div
-            className="add"
+            className="add cursor-pointer"
             onClick={
               isUpdating
                 ? () =>
@@ -50,12 +50,15 @@ function App() {
                 updateMode={() => {
                   updateMode(item._id, item.text);
                 }}
+                deleteToDo={() => {
+                  deleteToDo(item._id, setToDo);
+                }}
               />
             );
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

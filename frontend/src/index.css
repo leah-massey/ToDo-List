@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -12,16 +16,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  max-width: 600px;
-  margin: auto;
-  padding: 0 1rem;
-}
-
-h1 {
+/* h1 {
   margin-top: 1rem;
   text-align: center;
-}
+} */
 
 .top {
   margin-top: 1rem;
@@ -41,8 +39,8 @@ input {
 .todo {
   position: relative;
   margin-top: 1rem;
-  background-color: #000;
-  color: #fff;
+
+  color: #000;
   padding: 1.5rem 3rem;
   border-radius: 5px;
 }
