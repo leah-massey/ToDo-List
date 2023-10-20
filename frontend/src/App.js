@@ -51,6 +51,7 @@ function App() {
                   updateMode(item._id, item.text);
                 }}
                 deleteToDo={() => {
+                  console.log("item deleted");
                   deleteToDo(item._id, setToDo);
                 }}
               />

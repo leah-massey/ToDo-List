@@ -13,19 +13,6 @@ const getAllToDo = (setToDo) => {
     });
 };
 
-// const getAllToDo = (setToDo) => {
-//   axios
-//     .get(baseURL)
-//     .then((response) => {
-//       const data = response.data;
-//       console.log("data ----> ", data);
-//       setToDo(data);
-//     })
-//     .catch((err) => {
-//       console.error(err);
-//     });
-// };
-
 const addToDo = (text, setText, setToDo) => {
   axios.post(`${baseURL}/create`, { text }).then((data) => {
     console.log(data);
@@ -49,8 +36,9 @@ const updateToDo = (toDoId, text, setToDo, setText, setIsUpdating) => {
 
 const deleteToDo = (_id, setToDo) => {
   axios
-    .delete(`${baseURL}/delete`, { _id })
+    .post(`${baseURL}/delete`, { _id })
     .then((data) => {
+      console.log("test");
       getAllToDo(setToDo);
     })
     .catch((err) => {
