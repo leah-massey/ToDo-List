@@ -52,7 +52,7 @@ const ToDoBox = () => {
         </div>
         <div className="h-8"> </div>
 
-        <div className=" overflow-y-auto h-[58vh] py-2 ">
+        <div className=" overflow-y-auto h-[52vh] py-2 ">
           {toDo.map((item) => {
             return (
               <ToDo
