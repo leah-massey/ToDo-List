@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"  # Adjust to your build command
+  publish = "frontend/build"  # Adjust to your build output folder
+
+[dev]
+  command = "npm start"  # Adjust to your development server command
