@@ -38,3 +38,7 @@ module.exports.deleteToDo = async (req, res) => {
       console.log(err);
     });
 };
+
+module.exports.getPing = async (req, res) => {
+  res.send("pong");
+};
