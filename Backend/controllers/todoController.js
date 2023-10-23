@@ -8,11 +8,15 @@ module.exports.getToDo = async (req, res) => {
 module.exports.createToDo = async (req, res) => {
   const { text } = req.body;
 
-  ToDoModel.create({ text }).then((data) => {
-    console.log("todo created!");
-    console.log(data);
-    res.send(data);
-  });
+  ToDoModel.create({ text })
+    .then((data) => {
+      console.log("todo created!");
+      console.log(data);
+      res.send(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 module.exports.updateToDo = async (req, res) => {
