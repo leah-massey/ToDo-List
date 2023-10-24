@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "http://localhost:3002";
+const baseURL = "http://localhost:10000";
 // const baseURL = "https://todo-app-2iv2.onrender.com";
 
 const getAllToDo = (setToDo) => {
