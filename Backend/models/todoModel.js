@@ -7,4 +7,4 @@ const todoSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Todo", todoSchema); // "Todo" should match the name you want to use in the database(but singular) and todoSchema is the name of your schema
+module.exports = mongoose.model("todo", todoSchema); // "Todo" should match the name you want to use in the database(but singular) and todoSchema is the name of your schema
