@@ -13,5 +13,5 @@ Clicking on the update icon on a todo allows a user to update the content:
 </p>
 
 IMPROVEMENTS: 
-- The next stage for this project will be to create a login so that a user doesn't have to take on the chores of others. 
-- There is a slight lag when launching this app, so the chores from the database take a 20 seconds or so to arrive. 
+- The next stage for this project will be to create a login so that a user doesn't have to take on the chores of others (because we have enough chores for ourselves already!). 
+- There is a slight lag when launching this app, so the chores from the database take a 20 seconds or so to arrive - this needs improving. 
